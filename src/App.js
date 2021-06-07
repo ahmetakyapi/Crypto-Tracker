@@ -12,10 +12,11 @@ function App() {
         <CoinApi/>
     </Container>
   );
+
 }
 
 const Container = styled.div `
-    background: #67bc98;
-    height: 100vh;
+   background: #67bc98;
+    height: 150vh;
 `
 export default App;

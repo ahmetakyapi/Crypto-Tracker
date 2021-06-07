@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styled from "styled-components";
 import CoinData from "../CoinData/CoinData";
 
 function CoinApi() {
@@ -23,8 +22,8 @@ function CoinApi() {
         setSearch(e.target.value);
     };
 
-    const filteredCoins = coins.filter(coinData =>
-        coinData.name.toLowerCase().includes(search.toLowerCase())
+    const filteredCoins = coins.filter(coin =>
+        coin.name.toLowerCase().includes(search.toLowerCase())
     );
 
     return (
@@ -39,17 +38,19 @@ function CoinApi() {
                     />
                 </form>
             </div>
-            {filteredCoins.map(coin => {
-                return (
-                    <CoinData
-                        key={coin.id}
-                        name={coin.name}
-                        price={coin.price}
-                        symbol={coin.symbol}
-                        image={coin.image}
-                    />
-                );
-            })}
+    {filteredCoins.map(coin => {
+        return (
+            <CoinData
+            key = {coin.id}
+            name = {coin.name}
+            price = {coin.current_price}
+            priceChange={coin.price_change_percentage_24h}
+            symbol = {coin.symbol}
+            image = {coin.image}
+            src = {coin.src}
+            />
+        );
+    })}
         </div>
     );
 }
