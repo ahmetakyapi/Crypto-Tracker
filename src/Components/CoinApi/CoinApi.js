@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CoinData from "../CoinData/CoinData";
+import styled from "styled-components";
 
 function CoinApi() {
     const [coins, setCoins] = useState([]);
@@ -27,17 +28,17 @@ function CoinApi() {
     );
 
     return (
-        <div>
-            <div className='search-coin'>
-                <form>
+        <ApiContainer>
+            <CoinApp>
+                <SearchBar>
                     <input
                         className='coin-input'
                         type='text'
                         onChange={handleChange}
                         placeholder='Coin Ara...'
                     />
-                </form>
-            </div>
+                </SearchBar>
+            </CoinApp>
     {filteredCoins.map(coin => {
         return (
             <CoinData
@@ -51,8 +52,34 @@ function CoinApi() {
             />
         );
     })}
-        </div>
+        </ApiContainer>
     );
 }
+const ApiContainer = styled.div `
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+   `
+const CoinApp = styled.div `
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+   `
+const SearchBar = styled.div `
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  input {
+    background: antiquewhite;
+    font-size: 0.8em;
+    padding: 0.25em 1em;
+    border: 2px solid dimgrey;
+  }
+  
+   `
 
 export default CoinApi;
