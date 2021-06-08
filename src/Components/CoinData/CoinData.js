@@ -15,10 +15,12 @@ const CoinData = ({
               <Coin>
                       <img src={image} alt="i"/>
                        <h1>{name}</h1>
+              </Coin>
+             <CoinDigitalData>
                       <span>{symbol}</span>
                       <h4>${price}</h4>
-                      <h4>{priceChange}</h4>
-              </Coin>
+                      <h4>%{priceChange}</h4>
+          </CoinDigitalData>
           </CoinRow>
       </CoinContainer>
     )
@@ -32,10 +34,10 @@ const CoinData = ({
      display: flex;
      flex-direction: row;
      justify-content: start;
-     align-items: center;
-     height: 60px;
+     align-items: center;   
+     height: 55px;
      border-bottom: 2px solid antiquewhite;
-     width: 480px;
+     width: 720px;
    `
   const Coin = styled.div `
     display: flex;
@@ -53,22 +55,28 @@ const CoinData = ({
       height: 30px;
       width: 30px;
     }
-    h4 {
-      padding: 2rem 0;
-      color: gainsboro;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 1rem;
-      width: 150px;
-    }
-    
-    span {
-      font-weight: 700;
-      font-size: 1rem;
-      color: cornflowerblue;
-      width: 150px;
-      text-transform: uppercase;
-    }
+   `
+const CoinDigitalData= styled.div `
+  display: flex;
+  text-align: right;
+  justify-content: space-between;
+  width: 100%;
+  h4 {
+    color: gainsboro;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  span {
+    padding-right: 90px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: cornflowerblue;
+    text-transform: uppercase;
+    align-items: center;
+  }
    `
 
 

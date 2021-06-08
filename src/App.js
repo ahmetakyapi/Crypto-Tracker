@@ -13,6 +13,6 @@ function App() {
 }
 const Container = styled.div `
    background: darkslategray;
-    height: 120vh;
+    height: 105vh;
 `
 export default App;

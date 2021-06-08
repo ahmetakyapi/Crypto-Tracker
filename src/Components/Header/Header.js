@@ -17,7 +17,7 @@ const Head = styled.div`
 `;
 
 const Logo = styled.div `
-  padding: 0.8rem 0;
+  padding: 1rem 0;
   color: #7b7fda;
   text-decoration: none;
   font-weight: 800;
