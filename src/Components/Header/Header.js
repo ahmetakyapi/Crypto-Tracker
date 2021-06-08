@@ -17,14 +17,14 @@ const Head = styled.div`
 `;
 
 const Logo = styled.div `
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   color: #7b7fda;
   text-decoration: none;
-  font-weight: 800;
-  font-size: 1.5rem;
+  font-weight: 800; 
+  font-size: 2.5rem;
   span {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 2.1rem;
     color: darkgray;
   }
 `

@@ -65,7 +65,8 @@ const CoinApp = styled.div `
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  
    `
 const SearchBar = styled.div `
   margin-bottom: 30px;
@@ -73,11 +74,13 @@ const SearchBar = styled.div `
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  
   input {
     background: antiquewhite;
     font-size: 0.8em;
     padding: 0.25em 1em;
-    border: 2px solid dimgrey;
+    border: 3px solid dimgrey;
+    
   }
   
    `
